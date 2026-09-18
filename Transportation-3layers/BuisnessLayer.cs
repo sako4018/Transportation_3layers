@@ -20,11 +20,11 @@ namespace Transportation_3layers
             {
                 if (dn == "day")
                 {
-                    price = (double)km * dal.GetTaxiDayPrice();
+                    price = dal.TaxiStartPrice() + ((double)km * dal.GetTaxiDayPrice());
                 }
                 else if (dn == "night")
                 {
-                    price = (double)km * dal.GetTaxiNightPrice();
+                    price = dal.TaxiStartPrice() + ((double)km * dal.GetTaxiNightPrice());
                 }
             }
             else if (km >= 20 && km < 100)
