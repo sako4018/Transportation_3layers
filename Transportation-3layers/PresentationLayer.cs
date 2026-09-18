@@ -10,7 +10,7 @@ namespace Transportation_3layers
     {
         static void Main(string[] args)
         {   
-            //set info
+            //въвеждаш данни
             Console.Write("Enter the km you want to travel: ");
             decimal km = Convert.ToDecimal(Console.ReadLine());
             string dn = "";
@@ -19,10 +19,13 @@ namespace Transportation_3layers
                 Console.Write("day or night: ");
                 dn = Console.ReadLine();
             }
-            //get info
+            //връща обработената цена
             BuisnessLayer buisnessLayer = new BuisnessLayer();
             double price = buisnessLayer.CalculatePrice(km, dn);
-            Console.WriteLine(price);
+            Console.WriteLine(price + " lv.");
+
+            //
+            Console.ReadKey();
         }
     }
 }

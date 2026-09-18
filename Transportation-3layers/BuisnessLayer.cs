@@ -13,7 +13,9 @@ namespace Transportation_3layers
         private DAL dal = new DAL();
         public double CalculatePrice(decimal km, string dn)
         {
+            //създаваме променлива да пази цената
             double price = 0;
+            //такси ден/нощ
             if (km < 20)
             {
                 if (dn == "day")
@@ -33,6 +35,7 @@ namespace Transportation_3layers
             {
                 price = (double)km * dal.GetTrainPrice();
             }
+            //връща цената готова сметната
             return price;
         }
     }

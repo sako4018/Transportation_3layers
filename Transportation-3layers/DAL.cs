@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace Transportation_3layers
 {
     internal class DAL
+        //на всяко цените
     {
         public double GetTaxiDayPrice()
         {
